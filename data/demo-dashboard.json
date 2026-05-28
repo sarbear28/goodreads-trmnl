@@ -11,21 +11,53 @@
   "average_rating": "4.2",
   "latest_book": "Throne of Glass (Throne of Glass, #1)",
   "latest_author": "Sarah J. Maas",
+  "latest_read_title": "Throne of Glass (Throne of Glass, #1)",
+  "latest_read_author": "Sarah J. Maas",
+  "latest_read_cover_url": "https://covers.openlibrary.org/b/isbn/9781639730940-L.jpg",
   "currently_reading": [
     {
       "title": "Crown of Midnight (Throne of Glass, #2)",
       "author": "Sarah J. Maas",
-      "pages": 420
+      "pages": 420,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9781639730964-L.jpg"
     },
     {
       "title": "Famesick",
       "author": "Lena Dunham",
-      "pages": 288
+      "pages": 288,
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9781460713051-L.jpg"
     },
     {
       "title": "Forever Strong™: A New, Science-Based Strategy for Aging Well",
       "author": "Gabrielle Lyon",
-      "pages": 400
+      "pages": 400,
+      "cover_url": ""
+    }
+  ],
+  "last_three_read_books": [
+    {
+      "title": "Throne of Glass (Throne of Glass, #1)",
+      "author": "Sarah J. Maas",
+      "pages": 406,
+      "rating": 4,
+      "date_read": "2026/05/01",
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9781639730940-L.jpg"
+    },
+    {
+      "title": "Invention: A Life",
+      "author": "James Dyson",
+      "pages": 0,
+      "rating": 4,
+      "date_read": "2026/01/04",
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9781398500617-L.jpg"
+    },
+    {
+      "title": "A Kingdom of Flesh and Fire (Blood and Ash, #2)",
+      "author": "Jennifer L. Armentrout",
+      "pages": 637,
+      "rating": 4,
+      "date_read": "2026/01/04",
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9781952457104-L.jpg"
     }
   ],
   "yearly_stats": [
@@ -113,5 +145,13 @@
     5,
     3
   ],
-  "last_updated": "2026-05-28T16:05:37.927Z"
+  "current_book_1_title": "Crown of Midnight (Throne of Glass, #2)",
+  "current_book_1_author": "Sarah J. Maas",
+  "current_book_1_pages": 420,
+  "current_book_1_cover_url": "https://covers.openlibrary.org/b/isbn/9781639730964-L.jpg",
+  "current_book_2_title": "Famesick",
+  "current_book_2_author": "Lena Dunham",
+  "current_book_2_pages": 288,
+  "current_book_2_cover_url": "https://covers.openlibrary.org/b/isbn/9781460713051-L.jpg",
+  "last_updated": "2026-05-28T18:56:51.840Z"
 }
