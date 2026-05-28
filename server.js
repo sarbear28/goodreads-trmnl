@@ -186,6 +186,9 @@ app.post("/upload", upload.single("goodreadsCsv"), (req, res) => {
 
         currently_reading: currentlyReading,
         last_three_read_books: lastThreeReadBooks,
+        latest_read_title: latestBook?.["Title"] || "No books read yet",
+        latest_read_author: latestBook?.["Author"] || "",
+        latest_read_cover_url: latestBook ? getCoverUrl(latestBook) : "",
 
         yearly_stats: yearlyStats,
 
