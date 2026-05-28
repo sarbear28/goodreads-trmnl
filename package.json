@@ -1,0 +1,13 @@
+{
+  "name": "goodreads-trmnl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "An application to be run on TRMNL devices that displays your reading stats based on your Goodreads library"
+}

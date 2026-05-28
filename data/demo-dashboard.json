@@ -1,0 +1,117 @@
+{
+  "total_books_on_goodreads": 115,
+  "total_books_read": 53,
+  "total_to_read": 57,
+  "total_currently_reading": 5,
+  "total_pages_all_books": 42539,
+  "total_pages_read": 17360,
+  "books_read_this_year": 3,
+  "pages_read_this_year": 1043,
+  "pages_per_day_estimate": 7,
+  "average_rating": "4.2",
+  "latest_book": "Throne of Glass (Throne of Glass, #1)",
+  "latest_author": "Sarah J. Maas",
+  "currently_reading": [
+    {
+      "title": "Crown of Midnight (Throne of Glass, #2)",
+      "author": "Sarah J. Maas",
+      "pages": 420
+    },
+    {
+      "title": "Famesick",
+      "author": "Lena Dunham",
+      "pages": 288
+    },
+    {
+      "title": "Forever Strong™: A New, Science-Based Strategy for Aging Well",
+      "author": "Gabrielle Lyon",
+      "pages": 400
+    }
+  ],
+  "yearly_stats": [
+    {
+      "year": 2026,
+      "books_read": 3,
+      "pages_read": 1043
+    },
+    {
+      "year": 2024,
+      "books_read": 5,
+      "pages_read": 2647
+    },
+    {
+      "year": 2022,
+      "books_read": 2,
+      "pages_read": 437
+    },
+    {
+      "year": 2021,
+      "books_read": 6,
+      "pages_read": 1323
+    },
+    {
+      "year": 2020,
+      "books_read": 5,
+      "pages_read": 1642
+    },
+    {
+      "year": 2019,
+      "books_read": 8,
+      "pages_read": 2711
+    },
+    {
+      "year": 2018,
+      "books_read": 7,
+      "pages_read": 2059
+    }
+  ],
+  "books_per_year_chart": [
+    [
+      "2018",
+      7
+    ],
+    [
+      "2019",
+      8
+    ],
+    [
+      "2020",
+      5
+    ],
+    [
+      "2021",
+      6
+    ],
+    [
+      "2022",
+      2
+    ],
+    [
+      "2024",
+      5
+    ],
+    [
+      "2026",
+      3
+    ]
+  ],
+  "books_per_year_labels": [
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2024",
+    "2026"
+  ],
+  "books_per_year_values": [
+    7,
+    8,
+    5,
+    6,
+    2,
+    5,
+    3
+  ],
+  "last_updated": "2026-05-28T16:05:37.927Z"
+}
