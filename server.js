@@ -208,6 +208,7 @@ app.post("/upload", upload.single("goodreadsCsv"), (req, res) => {
         current_book_2_pages: currentlyReading[1]?.pages || "",
         current_book_2_cover_url: currentlyReading[1]?.cover_url || "",
 
+        
         last_updated: new Date().toISOString(),
       };
 
