@@ -198,6 +198,16 @@ app.post("/upload", upload.single("goodreadsCsv"), (req, res) => {
         books_per_year_labels: booksPerYearLabels,
         books_per_year_values: booksPerYearValues,
 
+        current_book_1_title: currentlyReading[0]?.title || "",
+        current_book_1_author: currentlyReading[0]?.author || "",
+        current_book_1_pages: currentlyReading[0]?.pages || "",
+        current_book_1_cover_url: currentlyReading[0]?.cover_url || "",
+
+        current_book_2_title: currentlyReading[1]?.title || "",
+        current_book_2_author: currentlyReading[1]?.author || "",
+        current_book_2_pages: currentlyReading[1]?.pages || "",
+        current_book_2_cover_url: currentlyReading[1]?.cover_url || "",
+
         last_updated: new Date().toISOString(),
       };
 
