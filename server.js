@@ -20,6 +20,25 @@ function parseDate(value) {
   return isNaN(date) ? null : date;
 }
 
+function cleanIsbn(value) {
+  if (!value) return "";
+
+  return String(value)
+    .replace(/[^0-9Xx]/g, "")
+    .trim();
+}
+
+function getCoverUrl(book) {
+  const isbn13 = cleanIsbn(book["ISBN13"]);
+  const isbn = cleanIsbn(book["ISBN"]);
+
+  const bestIsbn = isbn13 || isbn;
+
+  if (!bestIsbn) return "";
+
+  return `https://covers.openlibrary.org/b/isbn/${bestIsbn}-L.jpg`;
+}
+
 app.get("/upload", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "upload.html"));
 });
@@ -37,6 +56,21 @@ app.post("/upload", upload.single("goodreadsCsv"), (req, res) => {
       const readBooks = results.filter(
         (book) => book["Exclusive Shelf"] === "read"
       );
+
+      const sortedReadBooks = readBooks
+        .filter((book) => parseDate(book["Date Read"]))
+        .sort((a, b) => parseDate(b["Date Read"]) - parseDate(a["Date Read"]));
+
+      const latestBook = sortedReadBooks[0];
+
+      const lastThreeReadBooks = sortedReadBooks.slice(0, 3).map((book) => ({
+        title: book["Title"],
+        author: book["Author"],
+        pages: Number(book["Number of Pages"] || 0),
+        rating: Number(book["My Rating"] || 0),
+        date_read: book["Date Read"],
+        cover_url: getCoverUrl(book),
+      }));
 
       const readThisYear = readBooks.filter((book) => {
         const dateRead = parseDate(book["Date Read"]);
@@ -59,10 +93,6 @@ app.post("/upload", upload.single("goodreadsCsv"), (req, res) => {
             ).toFixed(1)
           : "N/A";
 
-      const latestBook = readBooks
-        .filter((book) => parseDate(book["Date Read"]))
-        .sort((a, b) => parseDate(b["Date Read"]) - parseDate(a["Date Read"]))[0];
-
       const currentlyReading = results
         .filter((book) => book["Exclusive Shelf"] === "currently-reading")
         .slice(0, 3)
@@ -70,6 +100,7 @@ app.post("/upload", upload.single("goodreadsCsv"), (req, res) => {
           title: book["Title"],
           author: book["Author"],
           pages: Number(book["Number of Pages"] || 0),
+          cover_url: getCoverUrl(book),
         }));
 
       const yearlyStatsMap = {};
@@ -154,6 +185,7 @@ app.post("/upload", upload.single("goodreadsCsv"), (req, res) => {
         latest_author: latestBook?.["Author"] || "",
 
         currently_reading: currentlyReading,
+        last_three_read_books: lastThreeReadBooks,
 
         yearly_stats: yearlyStats,
 
@@ -178,7 +210,6 @@ app.post("/upload", upload.single("goodreadsCsv"), (req, res) => {
       });
     });
 });
-
 
 app.get("/dashboard.json", (req, res) => {
   const dashboardPath = path.join(__dirname, "data", "demo-dashboard.json");
