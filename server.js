@@ -20,6 +20,10 @@ function parseDate(value) {
   return isNaN(date) ? null : date;
 }
 
+app.get("/upload", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "upload.html"));
+});
+
 app.post("/upload", upload.single("goodreadsCsv"), (req, res) => {
   const results = [];
   const filePath = req.file.path;
@@ -174,6 +178,7 @@ app.post("/upload", upload.single("goodreadsCsv"), (req, res) => {
       });
     });
 });
+
 
 app.get("/dashboard.json", (req, res) => {
   const dashboardPath = path.join(__dirname, "data", "demo-dashboard.json");
